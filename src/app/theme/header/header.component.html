@@ -1,0 +1,22 @@
+<div class="main-head-container">
+   <div class="left">
+      <div class="logo">
+         <p>CTax</p>
+      </div>
+   </div>
+
+   <div class="middle">
+      <a [ngClass]="{active: pageType === 'dash'}" (click)="pageType = 'dash'">{{ 'DASHBOARD' | translate }}</a>
+      <a [routerLink]="['/tax-collection-data']" routerLinkActive="router-link-active"  [ngClass]="{active: pageType === 'stand'}" (click)="pageType = 'stand'">Tax Collection Data</a>
+      <a [routerLink]="['/operations-manager-listing']" routerLinkActive="router-link-active"  [ngClass]="{active: pageType === 'opmanager'}" (click)="pageType = 'opmanager'">Operations Managers</a>
+   </div>
+<div>
+   <select [(ngModel)]="selectedLanguage" (change)="onLanguageChange()">
+      <option value="en">English</option>
+      <option value="fr">French</option>
+    </select>
+</div>
+   <div class="right">
+      <app-button [buttonLabel]="'SIGNOUT' | translate " (buttonclicked)="buttonClicked($event)"></app-button>
+   </div>
+</div>

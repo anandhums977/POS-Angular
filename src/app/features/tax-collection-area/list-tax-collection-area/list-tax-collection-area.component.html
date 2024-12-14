@@ -1,0 +1,121 @@
+<div class="search-and-table-container">
+  <div class="search-and-create">
+    <div class="search-and-filter">
+      <img
+        [matMenuTriggerFor]="tcaActivationFilter"
+        src="../../../../../assets/common/filter.svg"
+        alt=""
+      />
+      <search></search>
+    </div>
+    <app-button buttonLabel="+ Create Area" (click)="CreateAreaDialog()"></app-button>
+  </div>
+
+  <div class="table-paginator-container">
+    <div class="table-container">
+      <mat-table [dataSource]="taxCollectionAreas">
+
+        <!-- Position Column -->
+        <ng-container matColumnDef="#">
+          <mat-header-cell *matHeaderCellDef> # </mat-header-cell>
+          <mat-cell *matCellDef="let element; let i = index"> {{i + 1}} </mat-cell>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+          <mat-header-cell *matHeaderCellDef> NAME </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+        </ng-container>
+
+        <!-- zone Name Column -->
+        <ng-container matColumnDef="zone">
+          <mat-header-cell *matHeaderCellDef> ZONE </mat-header-cell>
+          <mat-cell *matCellDef="let element">
+            <div class="zones">
+              {{element.manager}}
+            </div>
+          </mat-cell>
+        </ng-container>
+
+        <!-- state Column -->
+        <ng-container matColumnDef="state">
+          <mat-header-cell *matHeaderCellDef> STATE </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.state}} </mat-cell>
+        </ng-container>
+
+        <!-- zoneManager Column -->
+        <ng-container matColumnDef="zoneManager">
+          <mat-header-cell *matHeaderCellDef> ZONE MANAGER </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.zoneManager}} </mat-cell>
+        </ng-container>
+
+        <!-- Actions Column -->
+        <ng-container matColumnDef="actions">
+          <mat-header-cell *matHeaderCellDef> ACTIONS </mat-header-cell>
+          <mat-cell *matCellDef="let element">
+            <svg (click)="deleteArea();$event.stopPropagation()" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 39 39" fill="none">
+              <circle cx="19.5" cy="19.5" r="19.5" fill="#FF0000" fill-opacity="0.07"/>
+              <path d="M25.6239 15.6147H13.3761C13.1927 15.6147 13.0321 15.6858 12.8945 15.8279C12.7569 15.9701 12.6881 16.1359 12.6881 16.3254L13.5596 28.2893C13.5749 28.4946 13.6667 28.6644 13.8349 28.7986C14.0031 28.9329 14.2324 29 14.5229 29H24.4771C24.7523 29 24.974 28.9329 25.1422 28.7986C25.3104 28.6644 25.4098 28.4946 25.4404 28.2893L26.3119 16.3254C26.3119 16.1359 26.2431 15.9701 26.1055 15.8279C25.9679 15.6858 25.8073 15.6147 25.6239 15.6147ZM15.922 27.5786C15.7691 27.5786 15.6315 27.5075 15.5092 27.3653C15.3869 27.2232 15.3257 27.0574 15.3257 26.8678L14.7294 17.7232C14.7294 17.5337 14.7982 17.3718 14.9358 17.2375C15.0734 17.1033 15.2339 17.0362 15.4174 17.0362C15.6009 17.0362 15.7615 17.1033 15.8991 17.2375C16.0367 17.3718 16.1055 17.5337 16.1055 17.7232L16.5183 26.8678C16.5183 27.0574 16.461 27.2232 16.3463 27.3653C16.2317 27.5075 16.0902 27.5786 15.922 27.5786ZM20.0963 26.8441C20.0963 27.0495 20.039 27.2232 19.9243 27.3653C19.8096 27.5075 19.6682 27.5786 19.5 27.5786C19.3318 27.5786 19.1904 27.5075 19.0757 27.3653C18.961 27.2232 18.9037 27.0495 18.9037 26.8441L18.8119 17.7232C18.8119 17.5337 18.8807 17.3718 19.0183 17.2375C19.156 17.1033 19.3165 17.0362 19.5 17.0362C19.6835 17.0362 19.844 17.1033 19.9817 17.2375C20.1193 17.3718 20.1881 17.5337 20.1881 17.7232L20.0963 26.8441ZM23.6743 26.8678C23.6743 27.0574 23.6131 27.2232 23.4908 27.3653C23.3685 27.5075 23.2309 27.5786 23.078 27.5786C22.9098 27.5786 22.7683 27.5075 22.6537 27.3653C22.539 27.2232 22.4817 27.0574 22.4817 26.8678L22.8945 17.7232C22.8945 17.5337 22.9633 17.3718 23.1009 17.2375C23.2385 17.1033 23.3991 17.0362 23.5826 17.0362C23.7661 17.0362 23.9266 17.1033 24.0642 17.2375C24.2018 17.3718 24.2706 17.5337 24.2706 17.7232L23.6743 26.8678ZM25.9908 12.5349L21.8853 11.8242C21.7018 11.7926 21.5872 11.6741 21.5413 11.4688L21.3578 10.687C21.2966 10.3712 21.1896 10.1658 21.0367 10.0711C20.945 10.0237 20.7768 10 20.5321 10H18.4679C18.2232 10 18.0474 10.0237 17.9404 10.0711C17.7875 10.1658 17.6881 10.3712 17.6422 10.687L17.4587 11.4688C17.4281 11.6741 17.3135 11.7926 17.1147 11.8242L13.0092 12.5349C12.7187 12.5823 12.4778 12.6968 12.2867 12.8784C12.0956 13.0601 12 13.2851 12 13.5536V14.217C12 14.3591 12.0497 14.4776 12.1491 14.5723C12.2485 14.6671 12.367 14.7145 12.5046 14.7145H26.4954C26.633 14.7145 26.7515 14.6671 26.8509 14.5723C26.9503 14.4776 27 14.3591 27 14.217V13.5536C27 13.2851 26.9044 13.0601 26.7133 12.8784C26.5222 12.6968 26.2813 12.5823 25.9908 12.5349Z" fill="#D90000"/>
+            </svg>
+            <svg (click)="editArea();$event.stopPropagation()" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 39 39" fill="none">
+              <circle cx="19.5" cy="19.5" r="19.5" fill="#00AA98" fill-opacity="0.07"/>
+              <path d="M28.3538 11.6526C26.1867 9.4734 24.068 9.42498 21.8404 11.6526L20.4723 13.0086C20.3512 13.1297 20.3149 13.2992 20.3633 13.4565C21.2108 16.4227 23.5837 18.7956 26.5499 19.6431C26.5862 19.6552 26.6468 19.6552 26.6831 19.6552C26.8041 19.6552 26.9252 19.6068 27.01 19.522L28.3538 18.1661C29.4555 17.0644 30.0003 16.0111 30.0003 14.9336C30.0003 13.844 29.4555 12.7665 28.3538 11.6526Z" fill="#00AA98"/>
+              <path d="M24.5276 20.6523C24.2007 20.4949 23.8859 20.3375 23.5954 20.1559C23.3532 20.0106 23.1111 19.8533 22.8811 19.6838C22.6874 19.5627 22.4694 19.3811 22.2515 19.1995C22.2273 19.1874 22.1547 19.1268 22.0578 19.03C21.6825 18.7273 21.283 18.3157 20.9077 17.8677C20.8835 17.8435 20.8108 17.7709 20.7503 17.6619C20.6292 17.5287 20.4476 17.2987 20.2902 17.0445C20.1571 16.875 19.9997 16.6328 19.8544 16.3786C19.6728 16.0759 19.5154 15.7733 19.3701 15.4585C19.2127 15.1195 19.0917 14.8047 18.9827 14.502L12.4693 21.0155C12.0455 21.4392 11.6339 22.2382 11.5491 22.8315L11.0285 26.4393C10.9196 27.202 11.1254 27.9163 11.5976 28.3885C11.9971 28.788 12.5419 28.9938 13.1472 28.9938C13.2804 28.9938 13.4136 28.9817 13.5468 28.9696L17.1425 28.4611C17.7357 28.3764 18.5347 27.9769 18.9585 27.541L25.4719 21.0276C25.1693 20.9307 24.8666 20.7975 24.5276 20.6523Z" fill="#00AA98"/>
+            </svg>
+          </mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="displayedColumnsAreaListing"></mat-header-row>
+        <mat-row  *matRowDef="let row; columns: displayedColumnsAreaListing;"></mat-row>
+
+      </mat-table>
+    </div>
+    <mat-paginator #paginator1 [length]="100"
+    [pageSize]="10"
+    [pageSizeOptions]="[5, 10, 25, 100]"
+    aria-label="Select page">
+</mat-paginator>
+  </div>
+
+</div>
+
+<!-- ZONES LISTING FILTER MENU -->
+<mat-menu #tcaActivationFilter="matMenu" class="filter">
+  <div class="filter-container">
+    <div class="filter-title">
+      Filter
+    </div>
+    <div class="filter">
+      <div class="filter-type">Stand</div>
+      <div class="filter-options">
+        <mat-form-field appearance="outline" (click)="$event.stopPropagation()">
+          <!-- <mat-label>Stand</mat-label> -->
+          <mat-select multiple>
+            @for (stand of stateList; track stand) {
+            <mat-option [value]="stand.id">{{ stand.name }}</mat-option>
+            }
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+    </div>
+    <div class="filter">
+      <div class="filter-type">Stand</div>
+      <div class="filter-options">
+        <mat-form-field appearance="outline" (click)="$event.stopPropagation()">
+          <!-- <mat-label>Stand</mat-label> -->
+          <mat-select multiple>
+            @for (stand of stateList; track stand) {
+            <mat-option [value]="stand.id">{{ stand.name }}</mat-option>
+            }
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+    </div>
+    <div class="buttons-contaner">
+      <app-button buttonLabel="Filter"></app-button>
+      <app-button buttonLabel="Clear" buttonType="clear"></app-button>
+    </div>
+  </div>
+</mat-menu>

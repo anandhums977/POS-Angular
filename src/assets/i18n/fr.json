@@ -1,0 +1,16 @@
+{
+    "TITLE": "Votre application fonctionne avec i18n activé",
+    "WELCOME": "BIENVENUE",
+    "WELCOME_TITLE": "Bienvenue sur CTax, connectez-vous pour continuer.",
+    "LOGIN": "Se connecter",
+    "DASHBOARD": "Tableau de bord",
+    "NAME": "Nom",
+    "LOCATION": "Emplacement",
+    "RIBBON_DATA_TITLE": {
+        "TOTAL_STANDS": "Nombre total de stands",
+        "TOTAL_TICKETS": "Nombre total de billets",
+        "TOTAL_COLLECTION": "Collection totale"
+    },
+    "SIGNOUT": "Se déconnecter",
+    "CREATE_MANAGER":"Créer un gestionnaire"
+}

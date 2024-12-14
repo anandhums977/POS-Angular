@@ -1,0 +1,41 @@
+<div class="delete-dialog-container">
+   <div class="delete-dialog-header">
+      @if(confirmData.type == 'delete'){
+      <h1 class="delete-dialog-title">
+         Delete Admin?
+      </h1>
+      } @else {
+      <h1 class="delete-dialog-title">
+         Reject Tax?
+      </h1>
+      }
+   </div>
+   <div class="delete-dialog-content">
+      @if(confirmData.type == 'delete'){
+      <p class="delete-dialog-message">
+         Are you sure to delete this admin?
+      </p>
+      <p class="delete-dialog-message">
+         All data related to this admin will bde deleted?
+      </p>
+      } @else {
+      <p class="delete-dialog-message">
+         Are you sure to reject this tax entry?
+      </p>
+      <p class="delete-dialog-message">
+         This tax data will be lost. If needed a new tax entry should be created.
+      </p>
+      }
+   </div>
+   <div class="delete-dialog-footer">
+      <button class="cancel" (click)="dialogRef.close(true)">Cancel</button>
+      <!-- <button class="delete" (click)="dialogRef.close(true)">{{ "MODULES.ADMINISTRATION.PERSON.SETTINGS.DELETE" |translate }}</button> -->
+      @if(confirmData.type == 'delete'){
+      <app-button class="create-button" buttonLabel="Delete" btnColor="red"
+         (click)="dialogRef.close(false)"></app-button>
+      } @else {
+      <app-button class="create-button" buttonLabel="Reject" btnColor="red"></app-button>
+      }
+
+   </div>
+</div>

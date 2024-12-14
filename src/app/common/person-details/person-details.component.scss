@@ -1,0 +1,133 @@
+.details-container {
+  width: 75vw;
+  height: 75vh;
+  background-color: white;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border: none !important;
+  outline: none !important;
+  position: relative;
+  .left-panel {
+    border-radius: 16px;
+    border: 1px solid #c0c0c0;
+    background: #00aa98;
+    height: 100%;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .image-container {
+      width: 100px;
+      height: 100px;
+      background: #fff;
+      border-radius: 50%;
+      display: flex;
+      padding: 10px;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 100%;
+      }
+    }
+    .name-and-location {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      .name {
+        color: #fff;
+        text-align: center;
+        font-family: Roboto;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 24px;
+      }
+      .location {
+        span {
+          color: #fff;
+          font-family: Roboto;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 24px;
+          margin-inline-start: 5px;
+        }
+      }
+    }
+  }
+  .right-panel {
+    border-radius: 16px;
+    border: 1px solid #c0c0c0;
+    background: #fff;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    width: 60%;
+    height: 100%;
+    border: none;
+
+    .details-container {
+      width: 75%;
+      height: 100%;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      max-width: 400px;
+      justify-content: flex-start;
+      align-items: baseline;
+      .details-type {
+        width: 100%;
+        margin:20px 0px;
+        .detail-item {
+          display: flex;
+          gap: 25px;
+          justify-content: space-between;
+          width: 100%;
+          .label {
+            color: #343434;
+            font-family: Roboto;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            margin-bottom: 5px;
+          }
+          .value {
+            color: #626262;
+            font-family: Roboto;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+          }
+        }
+        .title {
+          color: #343434;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          margin-bottom: 10px;
+        }
+        .details {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+      }
+      }
+    }
+  }
+}
+.close-button {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  cursor: pointer;
+}

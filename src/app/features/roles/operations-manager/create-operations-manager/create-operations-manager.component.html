@@ -1,0 +1,93 @@
+<div class="dialog-container">
+  <div class="dialog-header">
+    <div class="title">Create Operations Manager</div>
+    <svg (click)="dialogRef.close()" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 25 25" fill="none">
+      <path d="M23.7148 0.614221C23.1942 0.0935996 22.3501 0.0935996 21.8295 0.614221L12.1052 10.3385L2.381 0.614221C1.86039 0.0935996 1.0163 0.0935996 0.495691 0.614221C-0.0249308 1.13483 -0.0249308 1.97892 0.495691 2.49952L10.2199 12.2238L0.495718 21.9479C-0.0249041 22.4686 -0.0249041 23.3126 0.495718 23.8333C1.01633 24.3539 1.86042 24.3539 2.38102 23.8333L12.1052 14.1091L21.8295 23.8333C22.3501 24.3539 23.1942 24.3539 23.7148 23.8333C24.2354 23.3126 24.2354 22.4686 23.7148 21.948L13.9905 12.2238L23.7148 2.49952C24.2354 1.97892 24.2354 1.13483 23.7148 0.614221Z" fill="#101010" fill-opacity="0.5"/>
+    </svg>
+  </div>
+  <div class="dialog-content">
+    <form class="form-container" [formGroup]="operationsManagerForm" (ngSubmit)="onSubmit()">
+      <div class="form-grid">
+        <!-- Left Panel -->
+        <div class="left-panel">
+          <div class="form-field-container">
+            <mat-form-field appearance="outline" class="full-width">
+              <mat-label>Name</mat-label>
+              <input matInput formControlName="name">
+            </mat-form-field>
+            <mat-error *ngIf="operationsManagerForm.get('name')?.hasError('required')">Name is required</mat-error>
+          </div>
+
+          <div class="form-field-container">
+            <mat-form-field appearance="outline" class="full-width">
+              <mat-label>Number</mat-label>
+              <input matInput formControlName="number">
+            </mat-form-field>
+            <mat-error *ngIf="operationsManagerForm.get('number')?.hasError('required')">Number is required</mat-error>
+          </div>
+
+          <div class="form-field-container">
+            <mat-form-field appearance="outline" class="full-width">
+              <mat-label>Username</mat-label>
+              <input matInput formControlName="username">
+            </mat-form-field>
+            <mat-error *ngIf="operationsManagerForm.get('username')?.hasError('required')">Username is required</mat-error>
+          </div>
+
+          <div class="form-field-container">
+            <mat-form-field appearance="outline" class="full-width">
+              <mat-label>Zone Managers</mat-label>
+              <mat-select formControlName="zoneManagers">
+                <mat-option value="1">Zone Manager 1</mat-option>
+                <mat-option value="2">Zone Manager 2</mat-option>
+                <mat-option value="3">Zone Manager 3</mat-option>
+              </mat-select>
+            </mat-form-field>
+            <mat-error *ngIf="operationsManagerForm.get('zoneManagers')?.hasError('required')">Zone Manager is required</mat-error>
+          </div>
+        </div>
+
+        <!-- Right Panel -->
+        <div class="right-panel">
+          <div class="form-field-container">
+            <mat-form-field appearance="outline" class="full-width">
+              <mat-label>Email</mat-label>
+              <input matInput formControlName="email" type="email">
+            </mat-form-field>
+            <mat-error *ngIf="operationsManagerForm.get('email')?.hasError('required')">Email is required</mat-error>
+            <mat-error *ngIf="operationsManagerForm.get('email')?.hasError('email')">Enter a valid email</mat-error>
+          </div>
+
+          <div class="form-field-container">
+            <mat-form-field appearance="outline" class="full-width">
+              <mat-label>Commune(Zone)</mat-label>
+              <mat-select formControlName="communeZone">
+                <mat-option value="Zone 1">Zone 1</mat-option>
+                <mat-option value="Zone 2">Zone 2</mat-option>
+                <mat-option value="Zone 3">Zone 3</mat-option>
+              </mat-select>
+            </mat-form-field>
+            <mat-error *ngIf="operationsManagerForm.get('communeZone')?.hasError('required')">Commune zone is required</mat-error>
+          </div>
+
+          <div class="form-field-container">
+            <mat-form-field appearance="outline" class="full-width">
+              <mat-label>Password</mat-label>
+              <input matInput formControlName="password" type="password">
+            </mat-form-field>
+            <mat-error *ngIf="operationsManagerForm.get('password')?.hasError('required')">Password is required</mat-error>
+          </div>
+        </div>
+      </div>
+
+      <!-- Submit Button -->
+      <div class="button-container">
+        <app-button class="create-button" buttonLabel="Create"></app-button>
+      </div>
+    </form>
+
+
+
+
+  </div>
+</div>

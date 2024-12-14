@@ -1,0 +1,16 @@
+{
+    "TITLE": "Your app is running with i18n enabled.",
+    "WELCOME":"WELCOME",
+    "WELCOME_TITLE":"Welcome to CTax, login to continue.",
+    "LOGIN":"Login",
+    "DASHBOARD":"Dashboard",
+    "NAME":"Name",
+    "LOCATION":"Location",
+    "RIBBON_DATA_TITLE":{
+            "TOTAL_STANDS":"Total Stands",
+            "TOTAL_TICKETS":"Total Tickets",
+            "TOTAL_COLLECTION":"Total Collection"
+    },
+    "SIGNOUT":"Sign Out",
+    "CREATE_MANAGER":"Create Manager"
+}

@@ -1,0 +1,39 @@
+::ng-deep .filter {
+  border-radius: 8px !important;
+  .buttons-contaner {
+    display: flex;
+    gap: 5px;
+    width: 100%;
+    margin-top: 10px;
+    justify-content: flex-end;
+    app-button {
+      width: max-content;
+      display: flex;
+    }
+  }
+  .filter-options {
+    height: 44px;
+    margin-bottom: 5px;
+}
+  .filter-type {
+    font-weight: 500;
+    margin-bottom: 5px;
+    font-size: 13px;
+  }
+  ::ng-deep .mat-mdc-menu-content {
+    display: flex;
+    padding: 15px;
+  }
+  ::ng-deep.mdc-notched-outline {
+    height: 40px;
+  }
+  ::ng-deep mat-select {
+    position: absolute;
+    top: 8px;
+  }
+}
+.filter-title {
+  color: #00aa98;
+  font-weight: 500;
+  margin-bottom: 5px;
+}

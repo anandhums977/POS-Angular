@@ -1,0 +1,49 @@
+.main {
+  * {
+    padding: 0;
+    margin: 0;
+    font-family: Roboto;
+  }
+
+  $main-green: #00aa98;
+  $main-grey: #eeeeee;
+
+  .just-center {
+    display: flex;
+    align-items: center;
+  }
+
+  .full-center {
+    @extend .just-center;
+    justify-content: center;
+  }
+
+  button {
+    @extend .full-center;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 8px;
+    background: $main-green;
+    color: #fff;
+    font-weight: 500;
+    width: max-content;
+    cursor: pointer;
+    transition: all 0.5s;
+
+    &:hover {
+      background: #029082;
+    }
+  }
+
+  .red-btn {
+    background: #e65454;
+
+    &:hover {
+      background: #c23b3b;
+    }
+  }
+  button.clear {
+    background: $main-grey;
+    color: #000000;
+  }
+}

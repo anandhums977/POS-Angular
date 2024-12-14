@@ -1,0 +1,16 @@
+<div class="tree">
+    <ul>
+      <li *ngFor="let node of data">
+        <div class="tree-node">
+          <img src="../../../assets/common/card-machine.svg" alt="Image">
+          {{ node.name }}
+          <span class="badge">3</span> <!-- Badge for count -->
+        </div>
+        <ul *ngIf="hasChildren(node)">
+          <app-tree [data]="node.children"></app-tree>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  
+  

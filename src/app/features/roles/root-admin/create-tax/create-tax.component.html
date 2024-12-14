@@ -1,0 +1,83 @@
+<div class="create-admin-container">
+   <div class="head">
+      <div class="back-button-container" (click)="goBack()">
+         <svg class="back-button" id="Component_43_2" data-name="Component 43 – 2" xmlns="http://www.w3.org/2000/svg"
+            width="30" height="30" viewBox="0 0 30 30">
+            <g id="Rectangle_155" data-name="Rectangle 155" fill="#f5f6fa" stroke="#bbbfc9" stroke-width="1">
+               <rect width="30" height="30" rx="15" stroke="none" />
+               <rect x="0.5" y="0.5" width="29" height="29" rx="14.5" fill="none" />
+            </g>
+            <path id="Path_682" data-name="Path 682" d="M7,10l6.071,5.91L19.142,10"
+               transform="translate(27.955 1.929) rotate(90)" fill="none" stroke="#bbbfc9" stroke-width="1.5" />
+         </svg>
+
+         <div class="back-button-name">
+            Create New Tax
+         </div>
+      </div>
+   </div>
+
+   <div class="dialog-container">
+      <div class="dialog-content">
+         <form class="form-container" [formGroup]="taxForm" (ngSubmit)="onSubmit()">
+            <div class="form-grid">
+               <!-- Left Panel -->
+               <div class="left-panel">
+                  <div class="form-field-container">
+                     <mat-form-field appearance="outline" class="full-width">
+                        <mat-label>Name</mat-label>
+                        <input matInput formControlName="name">
+                     </mat-form-field>
+                     <mat-error *ngIf="taxForm.get('name')?.hasError('required')">Name is
+                        required</mat-error>
+                  </div>
+
+                  <div class="form-field-container">
+                     <mat-form-field appearance="outline" class="full-width">
+                        <mat-label>Select State</mat-label>
+                        <mat-select formControlName="state">
+                           <mat-option value="1">State 1</mat-option>
+                           <mat-option value="2">State 2</mat-option>
+                           <mat-option value="3">State 3</mat-option>
+                        </mat-select>
+                     </mat-form-field>
+                     <mat-error *ngIf="taxForm.get('state')?.hasError('required')">State is
+                        required</mat-error>
+                  </div>
+               </div>
+
+               <!-- Right Panel -->
+               <div class="right-panel">
+                  <div class="form-field-container">
+                     <mat-form-field appearance="outline" class="full-width">
+                        <mat-label>Tax Type</mat-label>
+                        <mat-select formControlName="taxType">
+                           <mat-option value="1">Tax Type 1</mat-option>
+                           <mat-option value="2">Tax Type 2</mat-option>
+                           <mat-option value="3">Tax Type 3</mat-option>
+                        </mat-select>
+                     </mat-form-field>
+                     <mat-error *ngIf="taxForm.get('taxType')?.hasError('required')">Tax type is
+                        required</mat-error>
+                  </div>
+
+                  <div class="form-field-container">
+                     <mat-form-field appearance="outline" class="full-width">
+                        <mat-label>Amount</mat-label>
+                        <input matInput formControlName="amount">
+                     </mat-form-field>
+                     <mat-error *ngIf="taxForm.get('amount')?.hasError('required')">Amount is
+                        required</mat-error>
+                  </div>
+               </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="button-container">
+               <app-button class="create-button" buttonLabel="Create Tax"></app-button>
+            </div>
+         </form>
+      </div>
+   </div>
+
+</div>

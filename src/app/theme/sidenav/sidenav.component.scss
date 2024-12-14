@@ -1,0 +1,91 @@
+// SCSS Variables for Colors
+$color_1: #009d63;
+$color_2: #bbbec5;
+$background-color_1: #009d63;
+$background-color_2: #c1efde;
+$background-color_3: transparent;
+
+// Defining :root directly (no need for &)
+:root {
+  --main-bg-color: $background-color_1;
+  --main-text-color: $color_1;
+  --second-text-color: $color_2;
+  --second-bg-color: $background-color_2;
+}
+
+// Styling for text and background
+.primary-text {
+  color: $color_1;
+}
+
+.second-text {
+  color: $color_2;
+}
+
+.primary-bg {
+  background-color: $background-color_1;
+}
+
+.secondary-bg {
+  background-color: $background-color_2;
+}
+
+.rounded-full {
+  border-radius: 100%;
+}
+
+// Wrapper styles
+
+
+// Sidebar styles
+#sidebar-wrapper {
+  min-height: 100vh;
+  margin-left: -15rem;
+  transition: margin 0.25s ease-out;
+
+  .sidebar-heading {
+    padding: 0.875rem 1.25rem;
+    font-size: 1.2rem;
+  }
+
+  .list-group {
+    width: 15rem;
+  }
+}
+
+// Page content wrapper styling
+#page-content-wrapper {
+  min-width: 100vw;
+}
+
+// Toggled state for wrapper and sidebar
+#wrapper.toggled {
+  #sidebar-wrapper {
+    margin-left: 0;
+  }
+}
+
+// Menu toggle button styling
+#menu-toggle {
+  cursor: pointer;
+}
+
+// List group item styling
+.list-group-item {
+  border: none;
+  padding: 20px 30px;
+
+  &.active {
+    background-color: $background-color_3;
+    color: $color_1;
+    font-weight: bold;
+    border: none;
+  }
+}
+
+// Media query for larger screens (min-width: 768px)
+@media (min-width: 768px) {
+  #sidebar-wrapper {
+    margin-left: 0;
+  }
+}

@@ -1,0 +1,15 @@
+
+<div class="d-flex" id="wrapper">
+    @if (isLoggedIn) {
+<app-sidenav></app-sidenav>
+}
+
+  
+  <div class="main-content-box">
+      
+    <div class="page-content-wrapper">
+        <router-outlet></router-outlet>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,108 @@
+<div class="details-container">
+  <div class="close-button" (click)="dialogRef.close()">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="none"
+    >
+      <path
+        d="M23.6096 0.390466C23.089 -0.130155 22.2449 -0.130155 21.7243 0.390466L12 10.1147L2.27577 0.390466C1.75516 -0.130155 0.911075 -0.130155 0.390466 0.390466C-0.130155 0.911073 -0.130155 1.75516 0.390466 2.27577L10.1147 12L0.390493 21.7241C-0.130129 22.2449 -0.130129 23.0889 0.390493 23.6096C0.911102 24.1301 1.75519 24.1301 2.2758 23.6096L12 13.8853L21.7243 23.6096C22.2449 24.1301 23.089 24.1301 23.6096 23.6096C24.1301 23.0889 24.1301 22.2449 23.6096 21.7243L13.8853 12L23.6096 2.27577C24.1301 1.75516 24.1301 0.911073 23.6096 0.390466Z"
+        fill="#101010"
+        fill-opacity="0.5"
+      />
+    </svg>
+  </div>
+  <div class="left-panel">
+    <div class="image-container">
+      @if(imageSrc!=''){ <img [src]="imageSrc" alt="User Image" /> } @else {
+      <img
+        src="../../../assets/images/person-details/placeholder.png"
+        alt="Placeholder Image"
+      />
+      }
+    </div>
+    <div class="name-and-location">
+      <div class="name">
+        {{ data.name }}
+      </div>
+      <div class="location">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="15"
+          height="20"
+          viewBox="0 0 15 20"
+          fill="none"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M7.5 5.62891C6.46438 5.62891 5.625 6.46828 5.625 7.50391C5.625 8.53953 6.46438 9.37891 7.5 9.37891C8.53563 9.37891 9.375 8.53953 9.375 7.50391C9.375 6.46828 8.53563 5.62891 7.5 5.62891ZM7.5 10.6289C5.77438 10.6289 4.375 9.23016 4.375 7.50391C4.375 5.77766 5.77438 4.37891 7.5 4.37891C9.22563 4.37891 10.625 5.77766 10.625 7.50391C10.625 9.23016 9.22563 10.6289 7.5 10.6289ZM7.5 0.00390625C3.35813 0.00390625 0 3.36203 0 7.50391C0 10.6402 6.25313 20.0108 7.5 20.0039C8.7275 20.0108 15 10.5977 15 7.50391C15 3.36203 11.6419 0.00390625 7.5 0.00390625Z"
+            fill="white"
+          />
+        </svg>
+        <span>{{ data.location }}</span>
+      </div>
+    </div>
+  </div>
+  <div class="right-panel">
+    <div class="details-container">
+      <div class="details-type">
+        <div class="title">
+          PERSONAL INFO
+        </div>
+        <div class="details">
+          <div class="detail-item">
+            <div class="label">Age:</div>
+            <div class="value">25</div>
+          </div>
+          <div class="detail-item">
+            <div class="label">Email:</div>
+            <div class="value">test&#64;test.com</div>
+          </div>
+          <div class="detail-item">
+            <div class="label">Number:</div>
+            <div class="value">999999999</div>
+          </div>
+          <div class="detail-item">
+            <div class="label">Username:</div>
+            <div class="value">{{ data.username }}</div>
+          </div>
+          <div class="detail-item">
+            <div class="label">Password:</div>
+            <div class="value">{{ data.password }}</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="details-type">
+        <div class="title">
+          TAX COLLECTION DETAILS
+        </div>
+        <div class="details">
+          <div class="detail-item">
+            <div class="label">Total Agent Admins:</div>
+            <div class="value">{{ data.totalAgentAdmins }}</div>
+          </div>
+          <div class="detail-item">
+            <div class="label">Total POS:</div>
+            <div class="value">
+              {{ data.totalPOS }}
+            </div>
+          </div>
+          <div class="detail-item">
+            <div class="label">Total TCs:</div>
+            <div class="value">{{ data.totalTCs }}</div>
+          </div>
+          <div class="detail-item">
+            <div class="label">Total Tax Collected:</div>
+            <div class="value">{{ data.totalTaxCollected }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>

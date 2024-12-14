@@ -1,0 +1,76 @@
+<div class="card-row">
+  <!-- First Card -->
+  <div class="dashboard-card">
+    <div class="card-content">
+      <div class="icon-wrapper success">
+        <i class="bi bi-coin"></i>
+      </div>
+      <div class="text-content">
+        <h3 class="amount">$21k</h3>
+        <small class="subtitle">Daily Collection</small>
+      </div>
+    </div>
+  </div>
+
+  <!-- Second Card -->
+  <div class="dashboard-card">
+    <div class="card-content">
+      <div class="icon-wrapper danger">
+        <i class="bi bi-person"></i>
+      </div>
+      <div class="text-content">
+        <h3 class="amount">120</h3>
+        <small class="subtitle">Zone managers</small>
+      </div>
+    </div>
+  </div>
+
+  <!-- Third Card -->
+  <div class="dashboard-card">
+    <div class="card-content">
+      <div class="icon-wrapper info">
+        <i class="bi bi-device-ssd"></i>
+      </div>
+      <div class="text-content">
+        <h3 class="amount">1,200</h3>
+        <small class="subtitle">Total POS</small>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fourth Card -->
+  <div class="dashboard-card">
+    <div class="card-content">
+      <div class="icon-wrapper warning">
+        <i class="bi bi-geo"></i>
+      </div>
+      <div class="text-content">
+        <h3 class="amount">5</h3>
+        <small class="subtitle">Total Zones</small>
+      </div>
+    </div>
+  </div>
+  <div class="dashboard-card">
+    <div class="card-content">
+      <div class="icon-wrapper warning">
+        <i class="bi bi-radar"></i>
+      </div>
+      <div class="text-content">
+        <h3 class="amount">5</h3>
+        <small class="subtitle">Total Zones</small>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="donut-chart-container">
+  <!-- Donut Chart Card -->
+  <div class="chart-card">
+    <h3>Daily Tax Distribution</h3>
+   <div echarts [options]="chartOption" id="donutChart"></div>
+  </div>
+
+ 
+</div>
+

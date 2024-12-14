@@ -1,0 +1,118 @@
+.footer-body {
+  font-family: Roboto;
+
+  .just-center {
+    display: flex;
+    align-items: center;
+  }
+
+  .full-center {
+    @extend .just-center;
+    justify-content: center;
+  }
+
+  $green-font: #00aa98;
+  $hover-grey: #bbbfc9;
+
+  display: flex;
+  background: #202020;
+  padding: 20px;
+
+  .logo-section {
+    font-size: 35px;
+    color: $green-font;
+    font-weight: 600;
+    min-width: 25vw;
+  }
+
+  .main-links {
+    flex: 1;
+    padding-inline-start: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    transition: all 0.5s;
+
+    .each-section {
+      margin-inline-end: 15px;
+
+      .heading {
+        font-size: 25px;
+        font-weight: 700;
+        color: #56585c;
+        margin-bottom: 30px;
+      }
+
+      .sub-items {
+        p {
+          font-size: 15px;
+          color: #fff;
+        }
+
+        .links {
+          padding-inline-start: 10px;
+          .each-link {
+            cursor: pointer;
+            margin-bottom: 7px;
+            padding-bottom: 3px;
+            border-bottom: 1px solid #56585c00;
+            transition: all 0.4s;
+
+            &:hover {
+              color: $hover-grey;
+              border-bottom: 1px solid #56585c;
+            }
+          }
+        }
+      }
+    }
+
+    .each-section:last-child {
+      margin-inline-end: 0;
+    }
+  }
+
+  @media (max-width: 1095px) {
+    .main-links {
+      grid-template-columns: 1fr 1fr !important;
+
+      .each-section:last-child {
+        grid-column: span 2;
+      }
+    }
+  }
+
+  @media (max-width: 770px) {
+    .main-links {
+      grid-template-columns: 1fr !important;
+
+      .each-section:last-child {
+        grid-column: unset;
+      }
+    }
+  }
+
+  @media (max-width: 550px) {
+    .footer-body {
+      flex-direction: column;
+
+      .logo-section {
+        margin-bottom: 10px;
+      }
+
+      .main-links {
+        padding-inline-start: 0;
+      }
+    }
+  }
+}
+
+.powerd {
+  padding: 15px;
+  background: #1a1919;
+  color: #56585c;
+  font-size: 15px;
+
+  p {
+    margin: 0;
+  }
+}

@@ -1,0 +1,164 @@
+<app-ribbon [cardData]="cardDetails" [name]="name" [location]="location"></app-ribbon>
+<div class="search-and-table-container">
+  <div class="search-and-filter">
+    <img [matMenuTriggerFor]="tcaActivationFilter" src="../../../../../assets/common/filter.svg" alt="" />
+    <search></search>
+  </div>
+
+  <div class="table-paginator-container">
+    <div class="table-container">
+      <mat-table [dataSource]="taxCollectionData">
+        <!-- Position Column -->
+        <ng-container matColumnDef="#">
+          <mat-header-cell *matHeaderCellDef> # </mat-header-cell>
+          <mat-cell *matCellDef="let element; let i = index">
+            {{ i + 1 }}
+          </mat-cell>
+        </ng-container>
+
+        <!-- stand Column -->
+        <ng-container matColumnDef="stand">
+          <mat-header-cell *matHeaderCellDef> STAND </mat-header-cell>
+          <mat-cell *matCellDef="let element">
+            {{ element.stand }}
+          </mat-cell>
+        </ng-container>
+
+        <!-- agent Column -->
+        <ng-container matColumnDef="agent">
+          <mat-header-cell *matHeaderCellDef>AGENT </mat-header-cell>
+          <mat-cell *matCellDef="let element">
+            {{ element.agent }}
+          </mat-cell>
+        </ng-container>
+
+        <!-- CONTACT Column -->
+        <ng-container matColumnDef="contact">
+          <mat-header-cell *matHeaderCellDef> CONTACT </mat-header-cell>
+          <mat-cell *matCellDef="let element">
+            {{ element.contact }}
+          </mat-cell>
+        </ng-container>
+
+        <!-- CONTACT Column -->
+        <ng-container matColumnDef="tickets">
+          <mat-header-cell *matHeaderCellDef> TICKETS </mat-header-cell>
+          <mat-cell *matCellDef="let element">
+            {{ element.tickets }}
+          </mat-cell>
+        </ng-container>
+        <!-- CONTACT Column -->
+        <ng-container matColumnDef="actualAmount">
+          <mat-header-cell *matHeaderCellDef> ACTUAL AMOUNT </mat-header-cell>
+          <mat-cell *matCellDef="let element">
+            {{ element.actualAmount }}$
+          </mat-cell>
+        </ng-container>
+        <!-- CONTACT Column -->
+        <ng-container matColumnDef="collectedAmount">
+          <mat-header-cell *matHeaderCellDef> COLLECTED AMOUNT </mat-header-cell>
+          <mat-cell *matCellDef="let element">
+            {{ element.collectedAmount }}$
+          </mat-cell>
+        </ng-container>
+        <!-- CONTACT Column -->
+        <ng-container matColumnDef="difference">
+          <mat-header-cell *matHeaderCellDef> DIFFERENCE </mat-header-cell>
+          <mat-cell *matCellDef="let element">
+            {{ element.difference }}$
+          </mat-cell>
+        </ng-container>
+
+        <!-- Actions Column -->
+        <ng-container matColumnDef="actions">
+          <mat-header-cell *matHeaderCellDef> ACTIONS </mat-header-cell>
+          <mat-cell *matCellDef="let element">
+            <button mat-button class="primary">ACCEPT</button>
+            <button mat-button class="warn" (click)="openRejectConfirm('400ms', '200ms')">REJECT</button>
+          </mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row [ngClass]="{'difference': row.difference!=0}" (click)="openPersonDeatilsDialog(row)"
+          *matRowDef="let row; columns: displayedColumns"></mat-row>
+      </mat-table>
+    </div>
+    <mat-paginator #paginator1 [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]"
+      aria-label="Select page">
+    </mat-paginator>
+  </div>
+</div>
+
+<!-- TCA APPROVAL FILTER MENU -->
+<mat-menu #tcaApptovalFilter="matMenu" class="filter">
+  <div class="filter-container">
+    <div class="filter-title">Filter</div>
+    <div class="filter">
+      <div class="filter-type">Stand</div>
+      <div class="filter-options">
+        <mat-form-field appearance="outline" (click)="$event.stopPropagation()">
+          <!-- <mat-label>Stand</mat-label> -->
+          <mat-select multiple>
+            @for (stand of standsList; track stand) {
+            <mat-option [value]="stand.id">{{ stand.name }}</mat-option>
+            }
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="filter">
+      <div class="filter-type">Stand</div>
+      <div class="filter-options">
+        <mat-form-field appearance="outline" (click)="$event.stopPropagation()">
+          <!-- <mat-label>Stand</mat-label> -->
+          <mat-select multiple>
+            @for (stand of standsList; track stand) {
+            <mat-option [value]="stand.id">{{ stand.name }}</mat-option>
+            }
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="buttons-contaner">
+      <app-button buttonLabel="Filter"></app-button>
+      <app-button buttonLabel="Clear" buttonType="clear"></app-button>
+    </div>
+  </div>
+</mat-menu>
+
+<!-- TCA ACTIVATION FILTER MENU -->
+<mat-menu #tcaActivationFilter="matMenu" class="filter">
+  <div class="filter-container">
+    <div class="filter-title">Filter</div>
+    <div class="filter">
+      <div class="filter-type">Stand</div>
+      <div class="filter-options">
+        <mat-form-field appearance="outline" (click)="$event.stopPropagation()">
+          <!-- <mat-label>Stand</mat-label> -->
+          <mat-select multiple>
+            @for (stand of standsList; track stand) {
+            <mat-option [value]="stand.id">{{ stand.name }}</mat-option>
+            }
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="filter">
+      <div class="filter-type">Stand</div>
+      <div class="filter-options">
+        <mat-form-field appearance="outline" (click)="$event.stopPropagation()">
+          <!-- <mat-label>Stand</mat-label> -->
+          <mat-select multiple>
+            @for (stand of standsList; track stand) {
+            <mat-option [value]="stand.id">{{ stand.name }}</mat-option>
+            }
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="buttons-contaner">
+      <app-button buttonLabel="Filter"></app-button>
+      <app-button buttonLabel="Clear" buttonType="clear"></app-button>
+    </div>
+  </div>
+</mat-menu>

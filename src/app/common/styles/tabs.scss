@@ -1,0 +1,44 @@
+// MAT STEPPER STYLES
+::ng-deep .mat-mdc-tab-header {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+  height: 60px !important;
+}
+::ng-deep .mat-mdc-tab-labels {
+  height: 50px !important;
+  margin-inline: 3%;
+  width: max-content;
+}
+::ng-deep .mdc-tab--active .mdc-tab__text-label {
+  color: #000 !important;
+
+}
+::ng-deep .mat-mdc-tab-list {
+  border-bottom: 1px solid rgba(0, 170, 152, 0.50) !important;
+}
+::ng-deep .mdc-tab__text-label {
+  color: #0000006e !important;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+}
+::ng-deep .mat-mdc-tab-labels {
+  display: flex;
+  flex: 1 0 auto;
+  top: 12px;
+  position: absolute;
+}
+::ng-deep .mdc-tab__ripple, ::ng-deep .mat-ripple{
+  display: none !important;
+}
+::ng-deep span.mdc-tab-indicator__content.mdc-tab-indicator__content--underline {
+  border-color: #00AA98!important;
+  border-width: 2px !important;
+  /* width: 100%; */
+}
+// MAT STEPPER STYLES

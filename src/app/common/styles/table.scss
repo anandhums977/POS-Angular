@@ -1,0 +1,129 @@
+mat-table.mat-mdc-table {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background-color: #ffffff;
+  margin-bottom: 8px;
+  mat-header-row.mat-mdc-header-row {
+    border-radius: 8px 8px 0px 0px;
+    border-bottom: 1px rgba(0, 0, 0, 0.05);
+    background: rgb(238 238 238);
+    max-height: 36px !important;
+    min-height: 36px !important;
+    margin-bottom: 3px;
+    position: sticky;
+    top: 0;
+
+    ::ng-deep mat-header-cell {
+      color: #5B5B5B;
+      text-align: center;
+      font-family: Roboto;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 20px;
+      border-bottom: none !important;
+      &:first-child{
+        border-radius: 8px 0px 0px 8px;
+      }&:last-child{
+        border-radius: 0px 80px 80px 0px;
+      }
+  }
+  }
+  mat-row.mat-mdc-row {
+    background: #f9f9f9;
+    max-height: 45px !important;
+    min-height: 45px !important;
+    border-radius: 8px !important;
+    cursor: pointer;
+
+
+    &:hover{
+      background: rgba(0, 170, 153, 0.029);
+    }
+    ::ng-deep mat-cell.mat-mdc-cell {
+      color: #000;
+      text-align: center;
+      font-family: Roboto;
+      font-size: 14px;
+      border-bottom: none !important;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20px;
+      &:first-child{
+        border-radius: 8px 0px 0px 8px;
+      }&:last-child{
+        border-radius: 0px 80px 80px 0px;
+      }
+  }
+  ::ng-deep .mat-column-actions{
+    display: flex;
+    gap: 8px
+  }
+  }
+}
+
+//PAGINATOR STYLES
+::ng-deep .mat-mdc-paginator-container {
+  ::ng-deep .mat-mdc-paginator-page-size {
+    display: flex!important;
+    align-items: center!important;
+    ::ng-deep .mat-mdc-form-field-infix {
+      padding-inline: unset!important;
+  }
+  }
+  ::ng-deep .mat-mdc-form-field-infix {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-inline: 10px !important;
+  }
+  border-radius: 8px;
+}
+
+::ng-deep .mdc-list-item--selected.mat-mdc-option-active .mdc-list-item__primary-text {
+  color: #00ab99 !important;
+}
+
+::ng-deep .mat-mdc-paginator-container {
+  background-color: #eeeeee;
+  color: black !important;
+  ::ng-deep .mat-mdc-paginator-icon{
+    fill: #5B5B5B
+  }
+  ::ng-deep.mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__leading, ::ng-deep.mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__notch, ::ng-deep.mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__trailing{
+    border-color: rgb(0 0 0 / 38%);
+  }
+  ::ng-deep .mat-mdc-select-trigger {
+    color: black;
+}
+::ng-deep .mat-mdc-select-arrow{
+  svg{
+    fill: #5B5B5B
+  }
+}
+::ng-deep .mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-notched-outline__leading, ::ng-deep.mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-notched-outline__notch, ::ng-deep.mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-notched-outline__trailing {
+  border-color: #00ab99;
+}
+
+
+}
+
+// ACCEPT REJECT BUTTON STYLES
+.primary{
+  @extend %common-button-styles;
+  background-color: rgba(0, 170, 150, 0.07);
+  color: #00AA96;
+
+}
+.warn{
+  @extend %common-button-styles;
+  background-color: rgba(170, 0, 0, 0.07);
+  color: #A00;
+}
+%common-button-styles {
+  font-weight: bold;
+  padding: 8px 15px;
+  border-radius: 8px;
+  border: none;
+}

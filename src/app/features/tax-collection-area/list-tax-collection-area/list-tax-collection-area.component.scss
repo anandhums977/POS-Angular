@@ -1,0 +1,66 @@
+@import url("../../../common/styles/common-styles.scss");
+* {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+.mat-mdc-tab-header {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+  width: max-content;
+}
+.search-and-table-container {
+  padding: 30px;
+  .search-and-create{
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    .search-and-filter {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      img{
+        cursor: pointer;
+      }
+      search{
+        width: 100%;
+      }
+  }
+    app-button{
+      min-width: 142px;
+    }
+  }
+  .table-paginator-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    .table-container {
+      overflow-x: auto;
+      padding-inline-end: 5px;
+      margin-top: 20px;
+      mat-table.mat-mdc-table.mdc-data-table__table.cdk-table {
+        min-width: 1400px;
+        max-height: 500px;
+    }
+    ::ng-deep mat-header-cell.mat-mdc-header-cell.mdc-data-table__header-cell.cdk-header-cell.cdk-column--.mat-column--{
+      max-width: 50px;
+    }
+    ::ng-deep mat-cell.mat-mdc-cell.mdc-data-table__cell.cdk-cell.cdk-column--.mat-column--{
+      max-width: 50px;
+    }
+    ::ng-deep mat-cell.mat-mdc-cell.mdc-data-table__cell.cdk-cell.cdk-column-numberOfAgents.mat-column-numberOfAgents {
+      min-width: 199px;
+  }
+  ::ng-deep mat-header-cell.mat-mdc-header-cell.mdc-data-table__header-cell.cdk-header-cell.cdk-column-numberOfAgents.mat-column-numberOfAgents{
+    min-width: 199px;
+  }
+      .zones {
+        overflow: hidden;
+        max-width: 90%;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+
+}

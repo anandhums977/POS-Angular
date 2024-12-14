@@ -1,0 +1,4 @@
+<div class="main">
+   <button (click)="onButtonClick($event)"
+      [ngClass]="{'clear': (buttonType=='clear'), 'red-btn': btnColor != 'green'}">{{buttonLabel}}</button>
+</div>

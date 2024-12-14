@@ -1,0 +1,34 @@
+@import url("../../../../common/styles/create-page.scss");
+
+.create-admin-container {
+  height: fit-content;
+  margin: 20px;
+  .head {
+    .back-button-container {
+      display: flex;
+      font-weight: bold;
+      font-size: 18px;
+      color: #202020;
+      gap: 10px;
+      align-items: center;
+      height: 100%;
+      svg.back-button {
+        g,
+        path {
+          transition: all 0.15s;
+        }
+        &:hover {
+          cursor: pointer;
+          g,
+          path {
+            stroke: #68728a;
+          }
+        }
+      }
+    }
+  }
+
+  .dialog-container {
+    width: unset !important;
+  }
+}

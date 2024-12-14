@@ -1,0 +1,25 @@
+#wrapper {
+    overflow-x: hidden;
+    background: #f4f7fc
+  }
+  .page-content-wrapper {
+    margin-top: 50px;
+    margin-left: 50px;
+    min-width: 80vw;
+  }
+
+  nav.navbar {
+    width: 100%;
+  }
+  
+  /* Styling for user name */
+  #userName {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  /* Dropdown items and navbar padding */
+  .navbar-nav {
+    padding: 0 15px;
+  }
+  
