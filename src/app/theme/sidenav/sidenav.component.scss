@@ -1,6 +1,6 @@
 // SCSS Variables for Colors
 $color_1: #009d63;
-$color_2: #bbbec5;
+$color_2: #3dae3784;
 $background-color_1: #009d63;
 $background-color_2: #c1efde;
 $background-color_3: transparent;
@@ -18,6 +18,9 @@ $background-color_3: transparent;
   color: $color_1;
 }
 
+.bg-white{
+  
+}
 .second-text {
   color: $color_2;
 }
@@ -46,11 +49,14 @@ $background-color_3: transparent;
   .sidebar-heading {
     padding: 0.875rem 1.25rem;
     font-size: 1.2rem;
+
+
   }
 
   .list-group {
     width: 15rem;
   }
+  
 }
 
 // Page content wrapper styling

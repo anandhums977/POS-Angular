@@ -1,0 +1,13 @@
+.load-wrapper {
+  display: flex;            /* Use flexbox */
+  justify-content: center;  /* Center horizontally */
+  align-items: center;      /* Center vertically */
+  min-width: 200px;
+  min-height: 200px;
+  text-align: center;
+}
+
+.loader-container {
+  width: 150px;             /* Loader size */
+  height: 150px;            /* Loader size */
+}

@@ -5,6 +5,7 @@ import * as echarts from 'echarts';
 
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { LoaderService } from '../../../../core/services/loader.service';
 
 
 
@@ -32,6 +33,9 @@ export class OperationsManagerDashboardComponent implements OnInit{
 
 
   activityValues: number[] = [0, 100];
+  constructor(private loaderService:LoaderService){
+    
+  }
   ngOnInit(): void {
       this.chartOption = {
         tooltip: {
@@ -79,4 +83,15 @@ export class OperationsManagerDashboardComponent implements OnInit{
 
 }
 
+
+simulateLoading() {
+  console.log('+++++++++++++++++++++++++++++++');
+  
+  this.loaderService.show();
+
+  // Simulate a delay, e.g., an HTTP call
+  setTimeout(() => {
+    this.loaderService.hide();
+  }, 3000);
+}
 }

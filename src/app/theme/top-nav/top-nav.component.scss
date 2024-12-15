@@ -1,0 +1,53 @@
+
+  /* Top Navbar */
+  .navbar {
+    display: flex;
+    justify-content: flex-end; // Align items to the right
+    align-items: center;
+    background-color: #fff !important;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(243, 187, 187, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  /* Container for language dropdown and avatar */
+  .navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 15px; // Space between dropdown and avatar
+  }
+  
+  /* Language Dropdown */
+  .language-dropdown {
+    select {
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 8px 12px;
+      font-size: 14px;
+      background-color: #f8f9fc;
+      cursor: pointer;
+      transition: border-color 0.3s ease;
+  
+      &:hover {
+        border-color: #007bff9d;
+        background-color: #e6f1ff; 
+      }
+          &:focus {
+      border-color: #0056b3; // Darker blue border when focused
+      outline: none; // Remove default outline
+    }
+    }
+  }
+  
+  /* Avatar Icon */
+  .avatar {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ddd;
+    cursor: pointer;
+  }
+  

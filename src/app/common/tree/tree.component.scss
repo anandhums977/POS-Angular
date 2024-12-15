@@ -24,7 +24,7 @@
           position: absolute;
           top: 0;
           right: 50%;
-          border-top: 2px dashed #a9d3a7d1; /* Dashed connector */
+          border-top: 2px dashed #86c783; /* Dashed connector */
           width: 50%;
           height: 20px;
         }
@@ -32,7 +32,7 @@
         &::after {
           right: auto;
           left: 50%;
-          border-left: 2px dashed #a9d3a7d1; /* Dashed connector */
+          border-left: 2px dashed #86c783; /* Dashed connector */
         }
   
         &:only-child {
@@ -49,7 +49,7 @@
         }
   
         &:last-child::before {
-          border-right: 2px dashed #a9d3a7d1;
+          border-right: 2px dashed #86c783;
           border-radius: 0 5px 0 0;
         }
   
@@ -105,7 +105,7 @@
             position: absolute;
             top: 0;
             left: 50%;
-            border-left: 2px dashed #a9d3a7d1;
+            border-left: 2px dashed #86c783;
             width: 0;
             height: 20px;
           }
