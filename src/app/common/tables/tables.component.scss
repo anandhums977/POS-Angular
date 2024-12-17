@@ -1,0 +1,133 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f8f9fc;
+}
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.button-container {
+    text-align: right;
+    margin-bottom: 15px;
+}
+
+.add-route-btn {
+    background-color: #4a6cf7;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #3853c6;
+    }
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+
+    th, td {
+        text-align: left;
+        padding: 12px;
+        font-size: 14px;
+        border-bottom: 1px dashed #c7c6c6;
+    }
+
+    th {
+        background-color: #f7f7f7;
+        color: #555;
+        font-weight: 600;
+    }
+
+    tr:hover {
+        background: linear-gradient(270deg, rgba(255, 255, 255, 0.5) 0%, rgba(221, 245, 255, 0.5) 100%);
+    }
+
+    .route-name {
+        font-weight: 600;
+    }
+}
+
+/* General checkbox styling */
+.custom-checkbox {
+    appearance: none; /* Removes default OS styles */
+    width: 18px; /* Size of the checkbox */
+    height: 18px;
+    border: 2px solid #d0d7de; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+    outline: none; /* Remove focus outline */
+    cursor: pointer;
+    position: relative; /* Relative positioning for pseudo-element */
+    transition: all 0.2s ease;
+
+    &:checked {
+        background-color: #4fc369; /* Blue background */
+        border-color: #4fc369;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 50%; /* Center vertically */
+            left: 50%; /* Center horizontally */
+            transform: translate(-50%, -50%) rotate(45deg); /* Center and rotate */
+            width: 5px; /* Width of the checkmark */
+            height: 10px; /* Height of the checkmark */
+            border: solid white;
+            border-width: 0 2px 2px 0; /* Draw the checkmark */
+        }
+    }
+}
+
+.status {
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+
+    &.active {
+        color: #4a6cf7;
+        background: #e6ecff;
+    }
+
+    &.delayed {
+        color: #f79256;
+        background: #ffece2;
+    }
+
+    &.completed {
+        color: #44c776;
+        background: #e8f8f0;
+    }
+
+    &.cancelled {
+        color: #ff5f5f;
+        background: #ffe6e6;
+    }
+
+    &.not-started {
+        color: #8f95a3;
+        background: #f0f2f5;
+    }
+}

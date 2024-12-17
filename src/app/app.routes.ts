@@ -9,6 +9,8 @@ import { TaxCollectionDataComponent } from './features/tax-collection-data/tax-c
 import { ListZonesComponent } from './features/zones/list-zones/list-zones.component';
 import { ListTaxCollectionAreaComponent } from './features/tax-collection-area/list-tax-collection-area/list-tax-collection-area.component';
 import { ListPosComponent } from './features/pos/list-pos/list-pos.component';
+import { Component } from '@angular/core';
+import { TablesComponent } from './common/tables/tables.component';
 export const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' }, // Redirect to login if no route is specified
   { path: 'login', component: LoginComponent },
@@ -21,6 +23,7 @@ export const routes: Routes = [
     path: 'tax-collection-data',
     component: TaxCollectionDataComponent,
   },
+  
   {
     path: 'operations-manager-listing',
     component: OperationsManagersListingComponent,
@@ -45,6 +48,7 @@ export const routes: Routes = [
     path: 'area-list',
     component: ListTaxCollectionAreaComponent,
   },
+  {path:'tables',component:TablesComponent,},
   {
     path: 'admin',
     loadChildren: () =>
@@ -53,3 +57,4 @@ export const routes: Routes = [
       ),
   },
 ];
+

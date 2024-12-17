@@ -18,13 +18,11 @@ export class AuthService {
   get isAuthenticated() {
     return this._isAuthenticated.asObservable();
   }
-
   login() {
     // Set authentication status to true and persist in localStorage
     this._isAuthenticated.next(true);
     localStorage.setItem('isAuthenticated', 'true');
   }
-
   logout() {
     // Set authentication status to false and remove from localStorage
     this._isAuthenticated.next(false);
