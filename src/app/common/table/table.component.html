@@ -1,1 +1,97 @@
-<p>table works!</p>
+<div class="table-container">
+   
+    <h2>Routes</h2>
+    <div class="button-container">
+        <button class="add-route-btn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white">
+            <rect x="10" y="4" width="4" height="16" fill="white"/>
+            <rect x="4" y="10" width="16" height="4" fill="white"/>
+          </svg>
+          Add New Route</button>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                <th>Route Name</th>
+                <th>Zone</th>
+                <th>Vehicle</th>
+                <th>Driver</th>
+                <th>Stops</th>
+                <th>Distance</th>
+                <th>Status</th>
+               <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td ><input type="checkbox" checked class="custom-checkbox"></td>
+                <td class="route-name">Hail to Al-Qassim Road</td>
+                <td>Riyadh Province</td>
+                <td>4672 JRB</td>
+                <td>16.4 Kms</td>
+                <td>14</td>
+                <td>36.8 Kms</td>
+                <td><span class="status active">  
+                    <img src="../../../assets/images/active.svg" alt="" style="vertical-align: middle; margin-right: 5px;">
+                Active</span></td>
+                <td><img src="../../../assets/images/arrow.svg" alt=""></td>
+                
+            </tr>
+            <tr>
+                <td ><input type="checkbox" class="custom-checkbox"></td>
+                <td class="route-name">Riyadh to Al-Ahsa Road</td>
+                <td>Eastern Province</td>
+                <td>4672 JRB</td>
+                <td>16.4 Kms</td>
+                <td>14</td>
+                <td>36.8 Kms</td>
+                <td><span class="status delayed"> <img src="../../../assets/images/delayed.svg" alt="" style="vertical-align: middle; margin-right: 5px;"> Delayed</span></td>
+                <td><img src="../../../assets/images/arrow.svg" alt=""></td>
+            </tr>
+            <tr class="selection">
+                <td ><input type="checkbox"  class="custom-checkbox"></td>
+                <td class="route-name">Mecca to Baha Highway</td>
+                <td>Medina Region</td>
+                <td>4672 JRB</td>
+                <td>16.4 Kms</td>
+                <td>14</td>
+                <td>36.8 Kms</td>
+                <td><span class="status active"> <img src="../../../assets/images/active.svg" alt="" style="vertical-align: middle; margin-right: 5px;">Active</span></td>
+                <td><img src="../../../assets/images/arrow.svg" alt=""></td>
+            </tr>
+            <tr>
+                <td ><input type="checkbox" class="custom-checkbox"></td>
+                <td class="route-name">Abha to Najran Route</td>
+                <td>Asir Region</td>
+                <td>4672 JRB</td>
+                <td>16.4 Kms</td>
+                <td>14</td>
+                <td>36.8 Kms</td>
+                <td><span class="status not-started"><img src="../../../assets/images/not-started.svg" alt="" style="vertical-align: middle; margin-right: 5px;"> Not Started</span></td>
+                <td><img src="../../../assets/images/arrow.svg" alt=""></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="custom-checkbox"></td>
+                <td class="route-name">Riyadh to Al-Ahsa Road</td>
+                <td>Medina Region</td>
+                <td>4672 JRB</td>
+                <td>16.4 Kms</td>
+                <td>14</td>
+                <td>36.8 Kms</td>
+                <td><span class="status completed"><img src="../../../assets/images/completed.svg" alt="" style="vertical-align: middle; margin-right: 5px;"> Completed</span></td>
+                <td><img src="../../../assets/images/arrow.svg" alt=""></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="custom-checkbox"></td>
+                <td class="route-name">Mecca to Baha Highway</td>
+                <td>Eastern Province</td>
+                <td>4672 JRB</td>
+                <td>16.4 Kms</td>
+                <td>14</td>
+                <td>36.8 Kms</td>
+                <td><span class="status cancelled"><img src="../../../assets/images/cancelled.svg" alt="" style="vertical-align: middle; margin-right: 5px;"> Cancelled</span></td>
+                <td><img src="../../../assets/images/arrow.svg" alt=""></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
