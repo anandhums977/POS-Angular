@@ -10,6 +10,7 @@ import { ListZonesComponent } from './features/zones/list-zones/list-zones.compo
 import { ListTaxCollectionAreaComponent } from './features/tax-collection-area/list-tax-collection-area/list-tax-collection-area.component';
 import { ListPosComponent } from './features/pos/list-pos/list-pos.component';
 import { TaxListComponent } from './features/tax-collection-data/tax-list/tax-list/tax-list.component';
+import { ZoneWiseCollectionComponent } from './features/roles/operations-manager/zone-wise-collection/zone-wise-collection.component';
 export const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' }, // Redirect to login if no route is specified
   { path: 'login', component: LoginComponent },
@@ -49,6 +50,10 @@ export const routes: Routes = [
   {
     path: 'taxes',
     component: TaxListComponent,
+  },
+  {
+    path: 'zone-wise-collection',
+    component: ZoneWiseCollectionComponent,
   },
   {
     path: 'admin',

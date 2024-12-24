@@ -1,6 +1,6 @@
 <div class="table-container">
    
-    <div class="head-wrapper"><h2>Tax List</h2>
+    <div class="head-wrapper"><h2>Zone Wise Tax Collection List</h2>
      
         <div>
         <label for="date-picker" class="date-label">Select Date</label>
@@ -20,11 +20,11 @@
         <thead>
             <tr>
                 <th></th>
-                <th>Tax Name</th>
+                <th>Zone Name</th>
                 <th>Amount</th>
                 <th>Currency</th>
-                <th>Frequency</th>
-                <th>Created By</th>
+                <th>Total POS</th>
+                <th>Zone Managed By</th>
                 <th>Created date</th>
                 <th>Status</th>
                <th></th>
@@ -33,10 +33,10 @@
         <tbody>
             <tr>
                 <td ><input type="checkbox" checked class="custom-checkbox"></td>
-                <td class="route-name">Cleaning Tax</td>
+                <td class="route-name">Zone 1</td>
                 <td>5000</td>
                 <td>Franc</td>
-                <td>Monthly</td>
+                <td>10</td>
                 <td>John Doe</td>
                 <td>2024-01-15</td>
                 <td><span class="status active">  
@@ -47,22 +47,24 @@
             </tr>
             <tr>
                 <td ><input type="checkbox" class="custom-checkbox"></td>
-                <td class="route-name">Bike Tax</td>
+                <td class="route-name">Zone 2</td>
                 <td>80000</td>
                 <td>Franc</td>
-                <td>Quarterly</td>
+                <td>15</td>
                 <td>Jane Smith</td>
                 <td>2024-02-10</td>
-                <td><span class="status delayed"> <img src="../../../assets/images/delayed.svg" alt="" style="vertical-align: middle; margin-right: 5px;"> Delayed</span></td>
+                <td><span class="status active">  
+                    <img src="../../../assets/images/active.svg" alt="" style="vertical-align: middle; margin-right: 5px;">
+                Active</span></td>
                 <td><img src="../../../assets/images/arrow.svg" alt=""></td>
             </tr>
          
             <tr class="selection">
                 <td ><input type="checkbox"  class="custom-checkbox"></td>
-                <td class="route-name">Cleaning Tax</td>
+                <td class="route-name">Zone 3</td>
                 <td>12000</td>
                 <td>Franc</td>
-                <td>Daily</td>
+                <td>13</td>
                 <td>Alex Johnson</td>
                 <td>2023-11-05</td>
                 <td><span class="status active"> <img src="../../../assets/images/active.svg" alt="" style="vertical-align: middle; margin-right: 5px;">
@@ -72,68 +74,77 @@
           
             <tr>
                 <td ><input type="checkbox" class="custom-checkbox"></td>
-                <td class="route-name">Rent Tax</td>
+                <td class="route-name">Zone 4</td>
                 <td>3000</td>
                 <td>Franc</td>
-                <td>Monthly</td>
+                <td>3</td>
                 <td>Emily Davis</td>
                 <td>2023-10-20</td>
-                <td><span class="status not-started"><img src="../../../assets/images/not-started.svg" alt="" style="vertical-align: middle; margin-right: 5px;"> Not Started</span></td>
+                <td><span class="status active">  
+                    <img src="../../../assets/images/active.svg" alt="" style="vertical-align: middle; margin-right: 5px;">
+                Active</span></td>
                 <td><img src="../../../assets/images/arrow.svg" alt=""></td>
             </tr>
           
             <tr>
                 <td><input type="checkbox" class="custom-checkbox"></td>
-                <td class="route-name">Luxury Tax</td>
+                <td class="route-name">Zone 5</td>
                 <td>15000</td>
                 <td>Franc</td>
-                <td>Annually</td>
+                <td>6</td>
                 <td>Michael Brown</td>
                 <td>2024-01-01</td>
-                <td><span class="status completed"><img src="../../../assets/images/completed.svg" alt="" style="vertical-align: middle; margin-right: 5px;"> Completed</span></td>
+                <td><span class="status active">  
+                    <img src="../../../assets/images/active.svg" alt="" style="vertical-align: middle; margin-right: 5px;">
+                Active</span></td>
                 <td><img src="../../../assets/images/arrow.svg" alt=""></td>
             </tr>
            
             <tr>
                 <td><input type="checkbox" class="custom-checkbox"></td>
-                <td class="route-name">Electricity Tax</td>
+                <td class="route-name">Zone 6</td>
                 <td>800</td>
                 <td>Franc</td>
-                <td>Monthly</td>
+                <td>9</td>
                 <td>Chris Lee</td>
                 <td>2024-02-05</td>
-                <td><span class="status cancelled"><img src="../../../assets/images/cancelled.svg" alt="" style="vertical-align: middle; margin-right: 5px;"> Cancelled</span></td>
+                <td><span class="status active">  
+                    <img src="../../../assets/images/active.svg" alt="" style="vertical-align: middle; margin-right: 5px;">
+                Active</span></td>
                 <td><img src="../../../assets/images/arrow.svg" alt=""></td>
             </tr>
             <tr>
                 <td><input type="checkbox" class="custom-checkbox"></td>
-                <td class="route-name">Garden Tax</td>
+                <td class="route-name">Zone 7</td>
                 <td>8700</td>
                 <td>Franc</td>
-                <td>Monthly</td>
+                <td>7</td>
                 <td>Chris Lee</td>
                 <td>2024-02-05</td>
-                <td><span class="status active"> <img src="../../../assets/images/active.svg" alt="" style="vertical-align: middle; margin-right: 5px;">
-                    Active</span></td>
+                <td><span class="status active">  
+                    <img src="../../../assets/images/active.svg" alt="" style="vertical-align: middle; margin-right: 5px;">
+                Active</span></td>
                 <td><img src="../../../assets/images/arrow.svg" alt=""></td>
             </tr>
             <tr>
                 <td><input type="checkbox" class="custom-checkbox"></td>
-                <td class="route-name">Property Tax</td>
+                <td class="route-name">Zone 8</td>
                 <td>3800</td>
                 <td>Franc</td>
-                <td>Monthly</td>
+                <td>4</td>
                 <td>Chris Lee</td>
                 <td>2024-02-05</td>
-                <td><span class="status cancelled"><img src="../../../assets/images/cancelled.svg" alt="" style="vertical-align: middle; margin-right: 5px;"> Cancelled</span></td>
+                <td><span class="status active">  
+                    <img src="../../../assets/images/active.svg" alt="" style="vertical-align: middle; margin-right: 5px;">
+                Active</span></td>
                 <td><img src="../../../assets/images/arrow.svg" alt=""></td>
             </tr>
             <tr>
                 <td><input type="checkbox" class="custom-checkbox"></td>
-                <td class="route-name">Vehicle Tax</td>
+                <td class="route-name">Zone 9</td>
                 <td>8800</td>
                 <td>Franc</td>
-                <td>Monthly</td>
+                <td>3</td>
                 <td>Chris Lee</td>
                 <td>2024-02-05</td>
                 <td><span class="status active">  
